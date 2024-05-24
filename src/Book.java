@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Book {
     private String title;
     private int pages;
@@ -33,6 +35,15 @@ public class Book {
 
     public String getReleaseYear() {
         return this.getReleaseYear();
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Title of th book: " + title + '\'' +
+                ", number of pages: '" + pages + '\'' +
+                ", release data: " + releaseYear +
+                '}';
     }
 }
 
