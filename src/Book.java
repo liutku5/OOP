@@ -4,7 +4,8 @@ public class Book {
     private String title;
     private int pages;
     private long releaseYear;
-    public Book(){
+
+    public Book() {
 
     }
     public Book(String title, int pages, long releaseYear) {
@@ -12,8 +13,6 @@ public class Book {
         this.pages = pages;
         this.releaseYear = releaseYear;
     }
-
-
 
     public void setTitle(String title) {
         this.title = title;
@@ -39,11 +38,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Book " +
                 "Title of th book: " + title + '\'' +
                 ", number of pages: '" + pages + '\'' +
                 ", release data: " + releaseYear +
-                '}';
+                ' ';
     }
 }
 
