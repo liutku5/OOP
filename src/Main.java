@@ -33,12 +33,9 @@ public class Main {
         books.add(book4);
         books.add(book5);
 
-        System.out.println(books.get(0));
-        System.out.println(books.get(1));
-        System.out.println(books.get(2));
-        System.out.println(books.get(3));
-        System.out.println(books.get(4));
-        System.out.println(books.get(5));
+        for (Book booklist : books) {
+            System.out.println("Book title: " + book.getTitle() + ", page number: " + book.getPages() + ", release year: " + book.getReleaseYear());
+        }
 
         System.out.println();
         System.out.println("-----------------------------------------------");
@@ -77,10 +74,10 @@ public class Main {
         plant3.setHeight(0.28);
         plant3.setEdible(true);
 
-        Plant plant4 = new Plant("Tomato", "Solanum lycopersicum", true, "Whole world",1.2192,true);
-        Plant plant5 = new Plant("Quaking Aspen", "Populus tremuloides", false, "North America",16,false);
-        Plant plant6 = new Plant("Sugar maple","Acer saccharum",false,"Eastern Canada and Eastern America",29,false);
-        Plant plant7 = new Plant("Cucumber","Cucumis sativus",true,"Whole world",1.524,true);
+        Plant plant4 = new Plant("Tomato", "Solanum lycopersicum", true, "Whole world", 1.2192, true);
+        Plant plant5 = new Plant("Quaking Aspen", "Populus tremuloides", false, "North America", 16, false);
+        Plant plant6 = new Plant("Sugar maple", "Acer saccharum", false, "Eastern Canada and Eastern America", 29, false);
+        Plant plant7 = new Plant("Cucumber", "Cucumis sativus", true, "Whole world", 1.524, true);
 
         ArrayList<Plant> plants = new ArrayList<>();
         plants.add(plant);
@@ -92,7 +89,7 @@ public class Main {
         plants.add(plant6);
         plants.add(plant7);
 
-        for (Plant plantList: plants ){
+        for (Plant plantList : plants) {
             System.out.println(plantList);
         }
     }

@@ -8,6 +8,7 @@ public class Book {
     public Book() {
 
     }
+
     public Book(String title, int pages, long releaseYear) {
         this.title = title;
         this.pages = pages;
@@ -19,33 +20,32 @@ public class Book {
     }
 
     public String getTitle() {
-        return this.getTitle();
+        return this.title;
     }
+
     public void setPages(int pages) {
         this.pages = pages;
     }
 
-    public String getPages() {
-        return this.getPages();
+    public int getPages() {
+        return this.pages;
     }
+
     public void setReleaseYear(long releaseYear) {
         this.releaseYear = releaseYear;
     }
 
-    public String getReleaseYear() {
-        return this.getReleaseYear();
+    public long getReleaseYear() {
+        return this.releaseYear;
     }
 
-    @Override
-    public String toString() {
-        return "Book " +
-                "Title of th book: " + title +
-                ", number of pages: " + pages +
-                ", release data: " + releaseYear +
-                ' ';
-    }
+//    @Override
+//    public String toString() {
+//        return "Book " +
+//                "Title of th book: " + title +
+//                ", number of pages: " + pages +
+//                ", release data: " + releaseYear +
+//                ' ';
+//    }
 }
 
-//        sukurti 3 objektus su reikšmėmis naudojantis tuščiu konstruktoriu, ir tris naudojantis pilnu konstuktoriu.
-//sudėti juos į knygų masyvą.
-//prasukti ciklą per masyvą ir atspausdinti knygas (naudojam getterius)

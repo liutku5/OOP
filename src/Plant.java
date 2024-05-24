@@ -25,7 +25,7 @@ public class Plant {
     }
 
     public String getName() {
-        return this.getName();
+        return this.name;
     }
 
     public void setLatinNamea(String latinName) {
@@ -33,23 +33,15 @@ public class Plant {
     }
 
     public String getLatinName() {
-        return this.getLatinName();
+        return this.latinName;
     }
 
     public void setPlantLife(boolean plantLife) {
         this.plantLife = plantLife;
     }
 
-    public void grow() {
-        if (plantLife) {
-            System.out.println("Annual");
-        } else {
-            System.out.println("Perennial");
-        }
-    }
-
     public String getPlantLife() {
-        return this.getPlantLife();
+        return String.valueOf(this.plantLife);
 
     }
 
@@ -58,15 +50,15 @@ public class Plant {
     }
 
     public String getLocation() {
-        return this.getLocation();
+        return this.location;
     }
 
     public void setHeight(double height) {
         this.height = height;
     }
 
-    public String getHeight() {
-        return this.getHeight();
+    public double getHeight() {
+        return this.height;
     }
 
     public void setEdible(boolean edible) {
@@ -74,12 +66,13 @@ public class Plant {
     }
 
     public String getEdible() {
-        return this.getEdible();
+        return String.valueOf(this.edible);
     }
 
     @Override
     public String toString() {
-        String edible = (edible) ? "edible" : "inedible";
+        String edible = (this.edible) ? "edible" : "inedible";
+        String plantLife = (this.plantLife) ? "annual" : "Perennial";
         return "Plants: " +
                 "Plant name: " + name +
                 ", plant name in latin: " + latinName +
