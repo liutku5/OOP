@@ -4,14 +4,14 @@ public class Plant {
     private boolean plantLife;
     private String location;
     private double height;
-    private String edible;
+    private boolean edible;
 
     public Plant() {
 
     }
 
     public Plant(String name, String latinName, boolean plantLife
-            , String location, double height, String edible) {
+            , String location, double height, boolean edible) {
         this.name = name;
         this.latinName = latinName;
         this.plantLife = plantLife;
@@ -50,6 +50,7 @@ public class Plant {
 
     public String getPlantLife() {
         return this.getPlantLife();
+
     }
 
     public void setLocation(String location) {
@@ -68,7 +69,7 @@ public class Plant {
         return this.getHeight();
     }
 
-    public void setEdible(String edible) {
+    public void setEdible(boolean edible) {
         this.edible = edible;
     }
 
@@ -78,12 +79,13 @@ public class Plant {
 
     @Override
     public String toString() {
+        String edible = (edible) ? "edible" : "inedible";
         return "Plants: " +
-                "Plant name: " + name + '\'' +
-                ", plant name in latin: " + latinName + '\'' +
-                ", is the plant an annual: " + plantLife + '\'' +
-                ", plants location: " + location + '\'' +
-                ", plant height in meters: " + height + " m. " + '\'' +
+                "Plant name: " + name +
+                ", plant name in latin: " + latinName +
+                ", is the plant an annual: " + plantLife +
+                ", plants location: " + location +
+                ", plant height in meters: " + height + " m. " +
                 ", is the plant edible: " + edible +
                 ' ';
     }

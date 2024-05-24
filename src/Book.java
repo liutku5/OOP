@@ -39,8 +39,8 @@ public class Book {
     @Override
     public String toString() {
         return "Book " +
-                "Title of th book: " + title + '\'' +
-                ", number of pages: '" + pages + '\'' +
+                "Title of th book: " + title +
+                ", number of pages: " + pages +
                 ", release data: " + releaseYear +
                 ' ';
     }

@@ -39,9 +39,7 @@ public class Main {
         System.out.println(books.get(3));
         System.out.println(books.get(4));
         System.out.println(books.get(5));
-//        for (Book bookList: books ){
-//            System.out.println(bookList);
-//        }
+
         System.out.println();
         System.out.println("-----------------------------------------------");
         System.out.println("Plants");
@@ -53,7 +51,7 @@ public class Main {
         plant.setPlantLife(false);
         plant.setLocation("America");
         plant.setHeight(20);
-        plant.setEdible("No");
+        plant.setEdible(false);
 
         Plant plant1 = new Plant();
         plant1.setName("Mango tree");
@@ -61,7 +59,7 @@ public class Main {
         plant1.setPlantLife(false);
         plant1.setLocation("India");
         plant1.setHeight(30);
-        plant1.setEdible("Yes");
+        plant1.setEdible(true);
 
         Plant plant2 = new Plant();
         plant2.setName("Raspberry");
@@ -69,7 +67,7 @@ public class Main {
         plant2.setPlantLife(false);
         plant2.setLocation("Northern Europe and North America");
         plant2.setHeight(1.8);
-        plant2.setEdible("Yes");
+        plant2.setEdible(true);
 
         Plant plant3 = new Plant();
         plant3.setName("Radishes");
@@ -77,33 +75,26 @@ public class Main {
         plant3.setPlantLife(true);
         plant3.setLocation("Whole world");
         plant3.setHeight(0.28);
-        plant3.setEdible("Yes");
+        plant3.setEdible(true);
 
-        Plant plant4 = new Plant("Tomato", "Solanum lycopersicum", true, "Whole world",1.2192,"Yes"  );
-        Plant plant5 = new Plant("Quaking Aspen", "Populus tremuloides", false, "North America",16,"No" );
-        Plant plant6 = new Plant("Sugar maple","Acer saccharum",false,"Eastern Canada and Eastern America",29,"no");
-        Plant plant7 = new Plant("Cucumber","Cucumis sativus",true,"Whole world",1.524,"Yes");
+        Plant plant4 = new Plant("Tomato", "Solanum lycopersicum", true, "Whole world",1.2192,true);
+        Plant plant5 = new Plant("Quaking Aspen", "Populus tremuloides", false, "North America",16,false);
+        Plant plant6 = new Plant("Sugar maple","Acer saccharum",false,"Eastern Canada and Eastern America",29,false);
+        Plant plant7 = new Plant("Cucumber","Cucumis sativus",true,"Whole world",1.524,true);
 
+        ArrayList<Plant> plants = new ArrayList<>();
+        plants.add(plant);
+        plants.add(plant1);
+        plants.add(plant2);
+        plants.add(plant3);
+        plants.add(plant4);
+        plants.add(plant5);
+        plants.add(plant6);
+        plants.add(plant7);
+
+        for (Plant plantList: plants ){
+            System.out.println(plantList);
+        }
     }
 }
 
-
-//Visi laukai turi būti private, turėti getterius ir setterius.
-//konstruktoriai - 2. tuščias ir su visais fieldais.
-//
-//------------------------
-//RAŠOM RANKA PATYS!
-//________________
-//
-//Klasės laukai:
-//Pavadinimas
-//lotyniskas pavadinimas
-//boolean vienmetis
-//kokiam zemyne auga
-//suaugusio augalo aukstis metrais.
-//ar valgomas?
-//
-//Maine susikuriam masyvą saugoti augalams. sukuriame 4 augalus (2x2 pagal konstruktorius)
-//
-//prasukti ciklą
-//pvz foreach ir atspausdinti augalus (naudojant toString() )
